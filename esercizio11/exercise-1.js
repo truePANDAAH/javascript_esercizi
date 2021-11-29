@@ -1,8 +1,8 @@
-const sum = function (a, b) {
+const sum = (a, b) => {
   return a + b;
 }
 
-const log = function (value) {
+const log = value => {
   console.log(value);
 }
 
