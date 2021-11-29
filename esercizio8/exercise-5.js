@@ -1,28 +1,3 @@
-/*Alternativa con reduce
-
-function calculateAverageAge(persons) {
-  let len = persons.length;
-  let agesArray = [];
-
-  for (let x in persons) {
-    agesArray.push(persons[x].age);
-  }
-
-  let result = (agesArray.reduce((sum, current)=> sum + current, 0)) / len;
-
-  return result;
-}
-*/
-/*
-function calculateAverageAge(persons) {
-  let len = persons.length;
-  let sum = 0;
-
-  for (let i = 0; i < len; sum += persons[i++].age);
-  return sum / len;
-}
-*/
-
 function calculateAverageAge(persons) {
   let len = persons.length;
   let sum = 0;
