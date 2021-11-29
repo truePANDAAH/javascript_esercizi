@@ -2,7 +2,6 @@ const students = ['Paul', 'George', 'Lucas'];
 
 function addStudent(student) {
   students.push(student);
-  //students[students.length] = student;
 }
 
 addStudent('Marco');
