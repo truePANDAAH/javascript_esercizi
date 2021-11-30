@@ -1,5 +1,16 @@
 const order = {};
 
-if (order && order.customer && order.customer.address && !order.customer.address.city) {
+if (order?.customer?.address && !order?.customer?.address?.city) {
   console.log('City is required');
 }
+
+//per avere un feedback in caso negativo lo modificherei così
+
+/*
+if (order?.customer?.address && !order?.customer?.address?.city) {
+  console.log('City is required');
+} else {
+  console.log('Missing data');
+}
+
+*/
