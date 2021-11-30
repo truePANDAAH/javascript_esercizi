@@ -1,5 +1,7 @@
 function uncompletedNotes(notes) {
-  // ...
+  const notesToEnd = notes.filter(note => note.todos.some(todo => todo.done !== true));
+
+  return notesToEnd;
 }
 
 const notes = [
