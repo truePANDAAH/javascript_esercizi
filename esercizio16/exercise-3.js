@@ -1,5 +1,11 @@
+let store;
+
 function createStore() {
-  // ...
+  store = [];
+
+  return function (product) {
+    return store.push(product), console.log(store);
+  }
 }
 
 const redPants = { id: 1, name: 'Red Pants' };
@@ -9,7 +15,7 @@ const blackSneakers = { id: 3, name: 'Black Sneakers' };
 console.log('--- Dress Store ---');
 const dressStore = createStore();
 dressStore(redPants);
-dressStore(whiteHat)
+dressStore(whiteHat);
 
 console.log('--- Shoes Store ---');
 const shoesStore = createStore();
