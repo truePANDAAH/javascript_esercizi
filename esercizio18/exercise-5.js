@@ -1,6 +1,14 @@
 function memoize(fn) {
-  let cache = {};
-  // ...
+  let cache = {};  
+
+  return num => {
+    if (cache[num]) {
+      return cache[num];
+    }
+    console.log('Calcolo in corso di ' + num);
+    cache[num] = fn(num);
+    return fn(num);
+  }
 }
 
 function factorial(x) {
