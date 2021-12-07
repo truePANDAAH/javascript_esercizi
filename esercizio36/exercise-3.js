@@ -3,6 +3,25 @@ class Person {
     this.firstName = firstName;
     this.lastName = lastName;
   }
+
+  static fromObject(objLit) {
+    return {
+      get firstName() {
+        return objLit.firstName;
+      },
+      set firstName(objLit) {
+        this._firstName = objLit.firstName;
+      },
+    
+      get lastName() {
+        return objLit.lastName;
+      },
+      set lastName(objLit) {
+        this._lastName = objLit.lastName;
+      }
+    }
+
+  }
 }
 
 const obj = {
