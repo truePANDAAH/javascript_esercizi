@@ -17,6 +17,7 @@ class BankAccount {
     console.log(this.#amount);
   }
 
+  // ho implementato la classe con questo metodo per restituire l'atributo pubblico altrimenti non accessibile dalla classe figlia
   myAmount () {
     return this.#amount;
   }
