@@ -36,7 +36,6 @@ class Person {
 
 const person = new Person('Mario', 'Rossi', 25);
 console.log(person.fullName);
-console.log(person.age);
 
 person.firstName = 'Maria';
 person.lastName = 'Verdi';
