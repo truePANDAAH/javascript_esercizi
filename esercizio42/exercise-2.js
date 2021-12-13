@@ -37,7 +37,7 @@ try {
   bankAccount.deposit(200);
   bankAccount.withdraw(10000);
 } catch (err) {
-  console.log('An error occurred. Try again.');
+  console.log(err.message);
   bankAccount.view()
 };
 

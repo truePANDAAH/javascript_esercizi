@@ -7,6 +7,12 @@ const person = {
 
 // const json = JSON.stringify(person);
 
-const json = JSON.stringify(person, ['id', 'age']);
+// const json = JSON.stringify(person, ['id', 'age']);
+
+function filter (key, value) {
+  return (typeof value === 'string' ?  undefined : value)
+};
+
+const json = JSON.stringify(person, filter);
 
 console.log(json); // Should return: { id: 1, age: 25 }
