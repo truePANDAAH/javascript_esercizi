@@ -53,6 +53,7 @@ try {
   bankAccount.deposit(200);
   bankAccount.withdraw(10000);
   bankAccount.view();
-} catch (e) {
+} catch (err) {
   console.log('Something went wrong during bank account operations');
+  console.log(err.message);
 }
