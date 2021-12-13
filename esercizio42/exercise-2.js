@@ -26,13 +26,19 @@ class BankAccount {
   }
 
   view() {
-    console.log(this.#amount);
+    console.log(`Your actual bank account is ${this.#amount}`);
   }
-}
+};
+
+const bankAccount = new BankAccount(1000);
+
+try {
+  bankAccount.deposit(500);
+  bankAccount.deposit(200);
+  bankAccount.withdraw(10000);
+} catch (err) {
+  console.log('An error occurred. Try again.');
+  bankAccount.view()
+};
 
 // Handle errors to avoid app crash
-const bankAccount = new BankAccount(1000);
-bankAccount.deposit(500);
-bankAccount.deposit(200);
-bankAccount.withdraw(10000);
-bankAccount.view();
