@@ -20,9 +20,17 @@ const persons = [
 ];
 
 function fetchPersonById(id) {
-  return new Promise((resolve) => {
-    setTimeout(() => resolve(persons.find(item => item.id === id)), 1000);
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if(persons.find(item => item.id === id)) {
+        resolve (this);
+      } else {
+        reject(new Error(`${id} doesn't exist`))
+      }
+    }, 1000);
   });
 }
 
-fetchPersonById(2).then((person) => console.log(person));
+fetchPersonById(5)
+.then((person) => console.log(person))
+.catch((err) => console.log(err));
