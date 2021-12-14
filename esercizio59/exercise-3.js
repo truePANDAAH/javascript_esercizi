@@ -33,4 +33,6 @@ function fetchPersonById(id) {
   });
 }
 
-// core here
+fetchPersonById(2)
+.then((person) => console.log(JSON.parse(person)))
+.catch((err) => console.log(err));
