@@ -19,6 +19,25 @@
   </body>
 </html>
 
-<script>
-  // code here
+<script>  
+  const formInputs = document.querySelectorAll('.form-input');
+  const objFormInputs = {};
+
+  function getFormInputs() {
+    formInputs.forEach(item => {
+      objFormInputs[item.id] = item.value;
+    })
+
+    console.log(objFormInputs);    
+  };
+
+  function newDataAttribute() {
+    const form = document.querySelector('form');
+    const jsonFormInputs = JSON.stringify(objFormInputs);
+
+    form.setAttribute('data-person', jsonFormInputs);
+    console.log('data-person', form.dataset.person);
+  }
+
+  window.onload = getFormInputs(), newDataAttribute();
 </script>
