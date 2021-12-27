@@ -11,5 +11,21 @@
 </html>
 
 <script>
-  // code here
+  const addRowBtn = document.querySelector('#add-row');
+
+  function addRow() {
+    const rowTexts = ['firstName', 'lastName', 'age'];
+    const newRow = document.createElement('tr');
+
+    rowTexts.forEach(item => {
+      let td = document.createElement('td');
+      let text = document.createTextNode(item);
+      td.appendChild(text);
+      newRow.appendChild(td);
+    });
+
+    document.querySelector('tbody').appendChild(newRow);
+  }
+
+  addRowBtn.addEventListener('click', addRow);
 </script>

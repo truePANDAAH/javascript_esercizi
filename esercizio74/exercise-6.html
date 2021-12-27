@@ -10,5 +10,41 @@
 </html>
 
 <script>
-  // Code here
+  const submitBtn = document.querySelector('button');
+
+  function initForm() {
+    const inputsId = ['firstName', 'lastName', 'age'];
+    const inputsLabels = ['First Name: ', 'Last Name: ', 'Age: '];
+
+
+    for (let i = 0; i < 3; i++) {
+      let div = document.createElement('div');
+      let input = document.createElement('input');
+      input.setAttribute('type', 'text');
+      input.setAttribute('id', inputsId[i]);
+      div.appendChild(input);
+      submitBtn.before(div);
+
+      let label = (document.createElement('label'));
+      label.innerText = inputsLabels[i];
+      input.before(label);
+    };
+  }
+  
+  window.onload = initForm();
+
+  const submitPersonForm= () => {
+    event.preventDefault();
+
+    const formInputs = document.querySelectorAll('input');
+    const person = {};
+
+    formInputs.forEach(item => {
+      person[item.id] = item.value;
+    })
+
+    console.log(person);
+  };
+
+  submitBtn.addEventListener('click', submitPersonForm)
 </script>
