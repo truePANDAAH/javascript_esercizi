@@ -20,5 +20,13 @@
 </html>
 
 <script>
-  // code here
+  const formInputs = document.querySelectorAll('.form-input');
+  
+  let getFormInputs = () => {
+    formInputs.forEach(item => {
+      console.log(item.previousElementSibling.innerText, item.value)
+    })
+  };
+
+  window.onload = getFormInputs();
 </script>
