@@ -14,5 +14,16 @@
 </html>
 
 <script>
-  // code here
+const heroListItems = document.querySelectorAll('.hero-list-item');
+
+heroListItems.forEach(item => {
+  item.addEventListener('mouseover', function(event) {
+  event.target.style.backgroundColor = "red";
+  });
+
+  item.addEventListener('mouseout', function(event) {
+  event.target.style.backgroundColor = "transparent";
+  });  
+});
+  
 </script>
