@@ -29,6 +29,8 @@
       label.innerText = inputsLabels[i];
       input.before(label);
     };
+
+    document.querySelector('#age').setAttribute('type', 'number');
   }
   
   window.onload = initForm();
