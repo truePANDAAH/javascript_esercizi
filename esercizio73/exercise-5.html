@@ -19,8 +19,13 @@
 
     rowTexts.forEach(item => {
       let td = document.createElement('td');
-      let text = document.createTextNode(item);
-      td.appendChild(text);
+      let input = document.createElement('input');
+      let inputType = (item == 'age') ? 'number' : 'text';
+
+      input.setAttribute('type', inputType);
+      input.setAttribute('id', item);
+      input.setAttribute('placeholder', item);
+      td.appendChild(input);
       newRow.appendChild(td);
     });
 

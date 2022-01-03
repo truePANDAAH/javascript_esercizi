@@ -20,7 +20,9 @@
     for (let i = 0; i < 3; i++) {
       let div = document.createElement('div');
       let input = document.createElement('input');
-      input.setAttribute('type', 'text');
+      let inputType = (inputsId[i] == 'age') ? 'number' : 'text';
+
+      input.setAttribute('type', inputType);
       input.setAttribute('id', inputsId[i]);
       div.appendChild(input);
       submitBtn.before(div);
@@ -29,8 +31,6 @@
       label.innerText = inputsLabels[i];
       input.before(label);
     };
-
-    document.querySelector('#age').setAttribute('type', 'number');
   }
   
   window.onload = initForm();
